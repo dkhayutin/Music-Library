@@ -29,13 +29,13 @@ var library = {
 // p01: Coding Music - 2 tracks
 // p02: Other Playlist - 1 tracks
 
-//   var printPlaylists = function () {
-//     for(id in library.playlists) {
-//       console.log(id + ': ' + library.playlists[id]['name'] + ' - ' + library.playlists[id]['tracks'].length + ' tracks')
-//     }
-//
-//   }
-//
+  var printPlaylists = function () {
+    for(id in library.playlists) {
+      console.log(id + ': ' + library.playlists[id]['name'] + ' - ' + library.playlists[id]['tracks'].length + ' tracks')
+    }
+
+  }
+
 // printPlaylists();
 
 
@@ -44,12 +44,12 @@ var library = {
 // t02: Model View Controller by James Dempsey (WWDC 2003)
 // t03: Four Thirty-Three by John Cage (Woodstock 1952)
 
-// var printTracks = function () {
-//   for (id in library.tracks) {
-//     console.log(id + ': ' + library.tracks[id]['name'] + ' by ' + library.tracks[id]['artist'] + ' (' + library.tracks[id]['album'] + ')')
-//   }
-// }
-//
+var printTracks = function () {
+  for (id in library.tracks) {
+    console.log(id + ': ' + library.tracks[id]['name'] + ' by ' + library.tracks[id]['artist'] + ' (' + library.tracks[id]['album'] + ')')
+  }
+}
+
 // printTracks()
 
 
@@ -71,16 +71,16 @@ var library = {
     console.log(trackId + ': ' + library.tracks[trackId].name + ' by ' + library.tracks[trackId].artist + '(' + library.tracks[trackId].album + ')')
   }
 
-  printPlaylist('p01')
+//  printPlaylist('p01')
 
 
 // adds an existing track to an existing playlist
 //
-// var addTrackToPlaylist = function (trackId, playlistId) {
-// var trackItems = library.playlists[playlistId].tracks
-// trackItems.push(trackId)
-// console.log(trackItems)
-// }
+var addTrackToPlaylist = function (trackId, playlistId) {
+var trackItems = library.playlists[playlistId].tracks
+trackItems.push(trackId)
+console.log(trackItems)
+}
 // addTrackToPlaylist('t03', 'p01')
 //
 
@@ -95,30 +95,30 @@ var uid = function() {
 
 // adds a track to the library
 //
-// var addTrack = function (name, artist, album) {
-//   uniqueId = {id: uid(),
-//     name: name,
-//     artist: artist,
-//     album: album,
-//   };
-//   library.tracks[uniqueId.id] = uniqueId;
-//   console.log(library.tracks)
-// }
-//
-// addTrack('CodingVibes', 'LilDeezy', 'Hot cHUnees')
-//
+var addTrack = function (name, artist, album) {
+  uniqueId = {id: uid(),
+    name: name,
+    artist: artist,
+    album: album,
+  };
+  library.tracks[uniqueId.id] = uniqueId;
+  console.log(library.tracks)
+}
+
+addTrack('CodingVibes', 'LilDeezy', 'Hot cHUnees')
+
 
 // adds a playlist to the library
-  // 
-  // var addPlaylist = function (name) {
-  //   newId = {id: uid(),
-  //     name: name,
-  //     tracks: ['t01', 't02']
-  //   }
-  //   library.playlists[newId.id] = newId
-  //   console.log(newId)
-  //
-  // }
+
+  var addPlaylist = function (name) {
+    newId = {id: uid(),
+      name: name,
+      tracks: ['t01', 't02']
+    }
+    library.playlists[newId.id] = newId
+    console.log(newId)
+
+  }
   // addPlaylist('Summer vibes')
   //
 
